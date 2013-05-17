@@ -9,11 +9,21 @@ DatabaseCleaner.strategy = :truncation
 Capybara.default_driver = :poltergeist
 Refinery::Core::Engine.routes.default_url_options[:host] = 'localhost:3000'
 
+# save_and_open_page
+
 class FeatureTest < MiniTest::Spec
   include Refinery::Core::Engine.routes.url_helpers
   include Capybara::DSL
+  Rpitts::Application.load_tasks
   register_spec_type(/feature$/, self)
-  `rake db:seed`
+    
+  before do
+    Rake::Task["db:seed"].tap(&:reenable).invoke
+    FactoryGirl.build(:superuser).create_first
+  end
+  after do
+    DatabaseCleaner.clean
+  end
 end
 
 Turn.config.format = :outline
