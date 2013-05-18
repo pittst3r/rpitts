@@ -95,7 +95,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    columnize (0.3.6)
     database_cleaner (0.9.1)
+    debugger (1.5.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.0)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.0)
     devise (2.0.5)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -120,6 +127,13 @@ GEM
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
       paper_trail (~> 2)
+    haml (4.0.2)
+      tilt
+    haml-rails (0.4)
+      actionpack (>= 3.1, < 4.1)
+      activesupport (>= 3.1, < 4.1)
+      haml (>= 3.1, < 4.1)
+      railties (>= 3.1, < 4.1)
     hike (1.2.2)
     http_parser.rb (0.5.3)
     i18n (0.6.1)
@@ -212,9 +226,10 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  coffee-rails (~> 3.2.1)
   database_cleaner
+  debugger
   factory_girl_rails
+  haml-rails
   jquery-rails (~> 2.0.0)
   launchy
   minitest
@@ -222,7 +237,7 @@ DEPENDENCIES
   rails (= 3.2.13)
   refinerycms (~> 2.0.0)!
   refinerycms-i18n (~> 2.0.0)
-  sass-rails (~> 3.2.3)
+  sass-rails
   sqlite3
   turn
   uglifier (>= 1.0.3)

@@ -1,5 +1,7 @@
 # R. Pitts
 
+[![Build Status](https://travis-ci.org/sweatypitts/rpitts.png)](https://travis-ci.org/sweatypitts/rpitts) [![Code Climate](https://codeclimate.com/github/sweatypitts/rpitts.png)](https://codeclimate.com/github/sweatypitts/rpitts)
+
 ## Testing
 
 - MiniTest
