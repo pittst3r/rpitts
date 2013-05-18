@@ -3,7 +3,7 @@ require "rake/testtask"
 Rake::Task[:test].clear
 
 desc "Run suite of tests"
-task :test => ["db:test:prepare", "test:features"]
+task :test => ["db:migrate", "test:features"]
 
 namespace :test do
   "Run feature tests"

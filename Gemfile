@@ -29,6 +29,6 @@ group :development, :test do
   gem 'minitest'
   gem 'poltergeist'
   gem 'rake'
-  gem 'sqlite3'
+  gem 'sqlite3', platform: [:ruby]
   gem 'turn'
 end
