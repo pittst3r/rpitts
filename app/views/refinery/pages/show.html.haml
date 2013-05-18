@@ -1,1 +1,3 @@
+%h1= @page.title
 
+!= @page.parts.where(title: "Body").first.body

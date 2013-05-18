@@ -7,6 +7,16 @@
     = javascript_include_tag "application"
   %body
     
-    %ul#main-menu
-      - root_pages(:no_home).each do |root|
-        %li= link_to root.title, root.url
+    %header
+      
+      %ul
+        - root_pages(:no_home).each do |root|
+          %li= link_to root.title, root.url
+      
+      %h1
+        = link_to "R. Pitts", root_path
+        %small Web Application Development
+      
+    %section#content
+      
+      = yield

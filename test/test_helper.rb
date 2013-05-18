@@ -28,3 +28,9 @@ class FeatureTest < MiniTest::Spec
 end
 
 Turn.config.format = :outline
+
+class String
+  def title_case
+    upcase
+  end
+end
