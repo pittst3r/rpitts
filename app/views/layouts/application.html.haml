@@ -1,1 +1,12 @@
-
+!!!
+%html
+  %head
+    %title R. Pitts: Web Application Development
+    = csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+  %body
+    
+    %ul#main-menu
+      - root_pages(:no_home).each do |root|
+        %li= link_to root.title, root.url
