@@ -18,7 +18,7 @@ describe "Application layout feature" do
   end
   
   it "links home on logo" do
-    find("header h1 a").click
+    find("header").click_link("R. Pitts")
     current_path.must_equal "/"
   end
   
