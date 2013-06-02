@@ -2,16 +2,16 @@
 %html
   %head
     %title R. Pitts: Web Application Development
-    = csrf_meta_tags if Refinery::Core.authenticity_token_on_frontend
+    = csrf_meta_tags
     = stylesheet_link_tag "application"
     = javascript_include_tag "application"
   %body
     
     %header
-      
-      %ul
-        - root_pages(:no_home).each do |root|
-          %li= link_to root.title, root.url
+      -#
+        %ul
+          - root_pages(:no_home).each do |root|
+            %li= link_to root.title, root.url
       
       %h1
         = link_to "R. Pitts", root_path

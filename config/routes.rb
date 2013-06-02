@@ -5,7 +5,6 @@ Rpitts::Application.routes.draw do
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
-  mount Refinery::Core::Engine, :at => '/'
   
   namespace :blog do
     resources :posts, only: [:index, :show]
@@ -60,7 +59,7 @@ Rpitts::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'blog::posts#index'
 
   # See how all your routes lay out with "rake routes"
 
