@@ -13,8 +13,10 @@ gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-search', '~> 2.0.0'
 
 gem 'haml-rails'
+gem 'hashie'
 gem 'jquery-rails', '~> 2.0.0'
 gem 'sass-rails'
+gem 'tumblr_client'
 gem 'uglifier', '>= 1.0.3'
 
 group :development do

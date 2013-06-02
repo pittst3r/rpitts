@@ -1,0 +1,25 @@
+$iris: #535094
+$light-iris: #d8d4e8
+$dark-iris: #434178
+$column-width: 500px
+$ease-in-out: all 0.2s ease-in-out
+$radius: 2px
+
+section#content
+  width: $column-width - 40px
+  margin: 0 auto
+  padding: 0 20px 15px
+  background: $light-iris
+  border-radius: $radius
+  > h1
+    margin: 0 -20px 15px
+    padding: 0 20px
+    border-radius: $radius $radius 0 0
+    background: $iris
+    color: $light-iris
+    font-weight: normal
+    line-height: 40px
+    text-transform: uppercase
+  > article
+    h2
+      @extend h1
